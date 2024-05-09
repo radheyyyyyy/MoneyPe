@@ -7,3 +7,4 @@
 - Filter in mangoDB(Searching).
 - Authentication with jsonwebtoken.
 - uses Local Storage for storing json-token.
+- Input Validation with the help of zod library.
