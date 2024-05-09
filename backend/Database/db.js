@@ -1,7 +1,7 @@
 const mongo=require("mongoose");
 const mongoose = require("mongoose");
 if(
-    mongo.connect('mongodb://localhost:27017/paytm')
+    mongo.connect('')  //Connection String
 ) console.log("MongoDB Connected");
 
  const User=mongo.model('Users',{
