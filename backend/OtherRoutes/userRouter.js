@@ -5,7 +5,6 @@ const {User, Account}=require('../Database/db')
 const jwt = require("jsonwebtoken");
 const {JWT_SECRET} = require("../config");
 const {authMiddleware} = require("../authMiddleware");
-const e = require("express");
 
 const schema=z.object({
     email:z.string().email(),

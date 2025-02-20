@@ -32,10 +32,9 @@ accountRouter.post('/transfer',async (req,res)=>{
         await (await session).abortTransaction();
         return res.send("Insufficient balance");
     }
-    console.log(bal1);
-    console.log(bal2);
-   const updated1=await Account.updateOne({user_id:bal1.user_id},{Balance:bal1.Balance-transfer});
-    const updated2= await Account.updateOne({user_id:bal2.user_id},{Balance:bal2.Balance+transfer});
+
+     await Account.updateOne({user_id:bal1.user_id},{Balance:bal1.Balance-transfer});
+     await Account.updateOne({user_id:bal2.user_id},{Balance:bal2.Balance+transfer});
 
     await (await session).commitTransaction();
     res.send("Successfully transferred");

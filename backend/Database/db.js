@@ -1,7 +1,7 @@
 const mongo=require("mongoose");
 const mongoose = require("mongoose");
 if(
-    mongo.connect('')  //Connection String
+    mongo.connect('mongodb://mongo:27017')  //Connection String
 ) console.log("MongoDB Connected");
 
  const User=mongo.model('Users',{
